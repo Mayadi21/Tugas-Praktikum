@@ -10,11 +10,11 @@ class Dosen extends Model
     use HasFactory;
 
     protected $table = 'dosen';
-    protected $primaryKey = 'id_dosen';
-    public $timestamps = false;
-    protected $fillable = [];
 
-    public function RuanganDosen() {
-        return $this->hasOne(RuanganDosen::class, 'id_dosen');
-    }
+    protected $primaryKey = 'id';
+
+    public $timestamps = false;
+
+    protected $fillable = ['id', 'nip', 'nama', 'email', 'no_hp'];
+
 }

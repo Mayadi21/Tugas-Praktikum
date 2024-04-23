@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Staff>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Dosen>
  */
-class StaffFactory extends Factory
+class DosenFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -20,7 +20,6 @@ class StaffFactory extends Factory
             'nip' => $this->faker->numerify('##########'),
             'email' => $this->faker->unique->safeemail(),
             'nama' => $this->faker->name,
-            'tanggal_lahir' => $this->faker->date(),
             'no_hp' => $this->faker->phoneNumber()
         ];
     }
