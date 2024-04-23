@@ -23,4 +23,3 @@ Route::get('/', function () {
 });
 Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
 Route::get('/dosen', [DosenController::class, 'index']);
-
