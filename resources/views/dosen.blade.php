@@ -1,4 +1,4 @@
-@extends('layouts.master')
+{{-- @extends('layouts.master')
 
 @section('container')
     <h1 class="text-center">Data Dosen</h1>
@@ -35,4 +35,4 @@
             </tbody>
           </table>
     </div>
-@endsection
+@endsection --}}
