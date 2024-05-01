@@ -28,8 +28,11 @@
                 <td>{{$mhs->alamat}}</td>
                 {{-- <td>{{$mhs->ktm->nomor_identitas}}</td> --}}
                 <td>
-                    <a href="{{route('edit', $mhs->id_mahasiswa)}}"><button type="button" class="btn btn-primary">Update</button></a>
-                    <a href=""><button type="button" class="btn btn-danger">Hapus</button></a>
+                  <form id="delete-form-{{$mhs->id_mahasiswa}}" action="{{route('delete', $mhs->id_mahasiswa)}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus data ini?')">Hapus</button>
+                  </form>
                 </td>
               </tr>
               @endforeach
